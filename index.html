@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>PEA Smart Tracker</title>
     
-    <link rel="apple-touch-icon" href="https://drive.google.com/uc?export=view&id=1dNIDscYI89ssTwJXGHeI_4Ppu0fmw7wy">
-    <link rel="icon" type="image/png" href="https://drive.google.com/uc?export=view&id=1dNIDscYI89ssTwJXGHeI_4Ppu0fmw7wy">
+    <link rel="apple-touch-icon" href="https://drive.google.com/thumbnail?id=1dNIDscYI89ssTwJXGHeI_4Ppu0fmw7wy&sz=w512">
+    <link rel="icon" type="image/png" href="https://drive.google.com/thumbnail?id=1dNIDscYI89ssTwJXGHeI_4Ppu0fmw7wy&sz=w512">
     <meta name="theme-color" content="#5b1a80">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <style>
-        body { margin: 0; padding: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; background: linear-gradient(135deg, #2e0249 0%, #5b1a80 100%); font-family: 'Sarabun', sans-serif; color: white; text-align: center; }
-        .logo-img { width: 150px; height: 150px; border-radius: 25px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); margin-bottom: 30px; border: 3px solid rgba(255,255,255,0.2); }
+        body { margin: 0; padding: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; background: linear-gradient(135deg, #2e0249 0%, #5b1a80 100%); font-family: sans-serif; color: white; text-align: center; }
+        .logo-img { width: 150px; height: 150px; border-radius: 25px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); margin-bottom: 30px; border: 3px solid rgba(255,255,255,0.2); object-fit: cover; background-color: #5b1a80; }
         h1 { margin: 0 0 10px 0; font-size: 1.8rem; color: #ffc107; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
         p { margin: 0 0 30px 0; color: rgba(255,255,255,0.8); font-size: 1.1rem; }
         .btn-enter { background: linear-gradient(180deg, #ffca2c 0%, #ffc107 100%); color: #2e0249; padding: 15px 40px; font-size: 1.2rem; font-weight: bold; border: none; border-radius: 30px; cursor: pointer; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4); display: inline-block; transition: transform 0.2s; }
@@ -27,12 +27,12 @@
 </head>
 <body>
 
-    <img src="https://drive.google.com/uc?export=view&id=1dNIDscYI89ssTwJXGHeI_4Ppu0fmw7wy" alt="Icon" class="logo-img">
+    <img src="https://drive.google.com/thumbnail?id=1dNIDscYI89ssTwJXGHeI_4Ppu0fmw7wy&sz=w512" alt="Icon" class="logo-img">
     <h1>PEA Smart Tracker</h1>
     <p>ระบบติดตามการตอบแบบสอบถาม</p>
 
     <div id="browser-view">
-        <a href="https://script.google.com/macros/s/AKfycbzGdcxacuubpVmpoZgakrwFRwXi3I1XfGI7OW7UysZD3Ht0wofLQ33Rlo2iKBRlP0h6/exec" class="btn-enter">เข้าสู่ระบบ</a>
+        <a href="วางลิงก์ระบบของคุณที่นี่" class="btn-enter">เข้าสู่ระบบ</a>
         
         <div class="instruction">
             <p>💡 <b>เคล็ดลับการใช้งาน:</b><br>กรุณากดปุ่ม <b>แชร์ (Share)</b> ด้านล่าง<br>แล้วเลือก <b>"เพิ่มไปยังหน้าจอโฮม"</b><br>(Add to Home Screen) เพื่อติดตั้งเป็นแอป</p>
@@ -45,20 +45,14 @@
     </div>
 
     <script>
-        // ⚠️ นำลิงก์ Google Apps Script ของคุณมาวางตรงนี้อีก 1 จุดครับ
-        var appUrl = "https://script.google.com/macros/s/AKfycbzGdcxacuubpVmpoZgakrwFRwXi3I1XfGI7OW7UysZD3Ht0wofLQ33Rlo2iKBRlP0h6/exec";
-
-        // เช็กว่าผู้ใช้เปิดเว็บนี้จาก "หน้าจอโฮม (Home Screen)" หรือ "เบราว์เซอร์ปกติ"
+        var appUrl = "วางลิงก์ระบบของคุณที่นี่"; // ⚠️ อย่าลืมใส่ลิงก์ Apps Script ตรงนี้นะครับ
         var isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
 
         if (isStandalone) {
-            // ถ้าเปิดจากไอคอนหน้าจอโฮม -> ซ่อนปุ่ม ซ่อนคำแนะนำ โชว์ตัวหมุนๆ แล้วเด้งเข้าเว็บเลย
             document.getElementById('browser-view').style.display = 'none';
             document.getElementById('app-view').style.display = 'block';
             setTimeout(function() { window.location.replace(appUrl); }, 500);
         }
     </script>
-
 </body>
 </html>
-
