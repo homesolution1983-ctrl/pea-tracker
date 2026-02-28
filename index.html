@@ -32,7 +32,7 @@
     <p>ระบบติดตามการตอบแบบสอบถาม</p>
 
     <div id="browser-view">
-        <a href="วางลิงก์ระบบของคุณที่นี่" class="btn-enter">เข้าสู่ระบบ</a>
+        <a href="https://script.google.com/macros/s/AKfycbzGdcxacuubpVmpoZgakrwFRwXi3I1XfGI7OW7UysZD3Ht0wofLQ33Rlo2iKBRlP0h6/exec" class="btn-enter">เข้าสู่ระบบ</a>
         
         <div class="instruction">
             <p>💡 <b>เคล็ดลับการใช้งาน:</b><br>กรุณากดปุ่ม <b>แชร์ (Share)</b> ด้านล่าง<br>แล้วเลือก <b>"เพิ่มไปยังหน้าจอโฮม"</b><br>(Add to Home Screen) เพื่อติดตั้งเป็นแอป</p>
@@ -45,14 +45,15 @@
     </div>
 
     <script>
-        var appUrl = "วางลิงก์ระบบของคุณที่นี่"; // ⚠️ อย่าลืมใส่ลิงก์ Apps Script ตรงนี้นะครับ
+        var appUrl = "https://script.google.com/macros/s/AKfycbzGdcxacuubpVmpoZgakrwFRwXi3I1XfGI7OW7UysZD3Ht0wofLQ33Rlo2iKBRlP0h6/exec"; // ⚠️ อย่าลืมใส่ลิงก์ Apps Script ตรงนี้นะครับ
         var isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
 
         if (isStandalone) {
             document.getElementById('browser-view').style.display = 'none';
             document.getElementById('app-view').style.display = 'block';
-            setTimeout(function() { window.location.replace(appUrl); }, 500);
+            setTimeout(function() { window.location.replace(appUrl); }, 300);
         }
     </script>
 </body>
 </html>
+
